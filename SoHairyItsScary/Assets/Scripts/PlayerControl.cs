@@ -3,14 +3,14 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
 
-    private Rigidbody rb;
+    //private Rigidbody rb;
 
-    void Start()
+    /*void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
+    }*/
 
-    void FixedUpdate()
+   /* void FixedUpdate()
     {
         float speed = 10f;
 
@@ -21,7 +21,41 @@ public class PlayerControl : MonoBehaviour {
 
         Debug.Log("Bewegung Hori: " + moveHorizontal.ToString());
         Debug.Log("Bewegung Verti: " + moveVertical.ToString());
-        rb.AddForce(movement * speed);
+        //rb.AddForce(movement * speed);
+        rb.MovePosition();
+    }*/
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            // moving to right
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                iTween.MoveBy(this.gameObject, new Vector3(1, 0, 0), 0.2f);
+            }
+            // moving to left
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                iTween.MoveBy(this.gameObject, new Vector3(-1, 0, 0), 0.2f);
+            }
+        }
+
+        if (Input.GetButtonDown("Vertical"))
+        {
+            // moving to up
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                iTween.MoveBy(this.gameObject, new Vector3(0, 0, 1), 0.2f);
+            }
+            // moving to down
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                iTween.MoveBy(this.gameObject, new Vector3(0, 0, -1), 0.2f);
+            }
+
+        }
+
     }
 
 }
