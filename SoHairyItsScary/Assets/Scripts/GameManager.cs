@@ -45,4 +45,8 @@ public class GameManager: Object {
 			}
 		}
 	}
+
+	public GameArea getCurrentGameArea() {
+		return this.firstArea; // ATM this is static
+	}
 }

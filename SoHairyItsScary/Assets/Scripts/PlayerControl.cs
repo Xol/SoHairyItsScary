@@ -40,11 +40,13 @@ public class PlayerControl : MonoBehaviour {
             {
                 iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);
                 mesh.transform.eulerAngles = new Vector3(0,90,0);
+				GM.getCurrentGameArea().movePlayerX(1);
             }
             else if (Input.GetAxis("Horizontal") < 0)
             {
                 iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
                 mesh.transform.eulerAngles = new Vector3(0, 270, 0);
+				GM.getCurrentGameArea().movePlayerX(-1);
             }
         }
 
@@ -54,11 +56,13 @@ public class PlayerControl : MonoBehaviour {
             {
                 iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);
                 mesh.transform.eulerAngles = new Vector3(0, 0, 0);
+				GM.getCurrentGameArea().movePlayerY(1);
             }
             else if (Input.GetAxis("Vertical") < 0)
             {
                 iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);
                 mesh.transform.eulerAngles = new Vector3(0, 180, 0);
+				GM.getCurrentGameArea().movePlayerY(-1);
             }
 
         }
