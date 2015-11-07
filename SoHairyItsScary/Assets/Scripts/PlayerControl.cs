@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour {
 
 	void Awake () {
 		GM = GameManager.Instance;
-		GM.OnStateChange += HandleOnStateChange;
+		GM.OnStateChange += HandleOnStateChange; // register eventhandler for 'OnStateChange' event
 		
 		Debug.Log("Current game state when Awakes: " + GM.gameState);
 
