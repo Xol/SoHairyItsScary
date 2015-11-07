@@ -16,7 +16,7 @@ public class GameManager: Object {
 	public  GameState gameState { get; private set; }
 
 //	private GameWorld gameWorld = new GameWorld();
-	private GameArea firstArea = new GameArea();
+	private GameLevel firstArea = new GameLevel();
 	
 	public static GameManager Instance {
 		get {
@@ -38,15 +38,15 @@ public class GameManager: Object {
 	}
 
 	private void initializeGameArea() {
-		for (int rowIndex=0; rowIndex<GameArea.EDGE_SIZE; rowIndex++) {
-			for (int colIndex=0; colIndex<GameArea.EDGE_SIZE; colIndex++) {
+		for (int rowIndex=0; rowIndex<GameLevel.EDGE_SIZE; rowIndex++) {
+			for (int colIndex=0; colIndex<GameLevel.EDGE_SIZE; colIndex++) {
 
 				this.firstArea.setField(rowIndex, colIndex, new GrassGameField());
 			}
 		}
 	}
 
-	public GameArea getCurrentGameArea() {
+	public GameLevel getCurrentGameArea() {
 		return this.firstArea; // ATM this is static
 	}
 }
