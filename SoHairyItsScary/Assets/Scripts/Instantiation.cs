@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Instantiation : MonoBehaviour {
     public Transform CubeForFloor;
+	public Transform CubeForStoneFloor;
+
 	GameManager GM;
 	GameLevel currentArea;
 
@@ -17,7 +19,8 @@ public class Instantiation : MonoBehaviour {
 				// Transform prefab = field.getPrefab();
 				string className = field.GetType().Name;
 				if (className.Equals("GrassGameField")) {
-					Instantiate(CubeForFloor, new Vector3(rowIndex, -0.5f, colIndex), Quaternion.identity);
+					//Instantiate(CubeForFloor, new Vector3(rowIndex, -0.5f, colIndex), Quaternion.identity);
+					Instantiate(CubeForStoneFloor, new Vector3(rowIndex, -0.5f, colIndex), Quaternion.identity);
 				} else {
 					Debug.LogError("Cannot instantiate field for type " + className);
 				}

@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 344f7865fa7b83947857e5700b8bd2c0
-timeCreated: 1446914379
+timeCreated: 1446915618
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - CubeForFloor: {fileID: 432786, guid: 472e2b02445768e49b9a75cb3fa4fae5, type: 2}
+  - CubeForStoneFloor: {fileID: 455144, guid: 96668c024b55544cfa2d3b7a502afdbd, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
