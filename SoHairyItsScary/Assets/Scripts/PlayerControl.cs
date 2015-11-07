@@ -3,27 +3,14 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
 
-    //private Rigidbody rb;
+    public GameObject player;
+    public GameObject mesh;
 
-    /*void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }*/
+    public static bool FloatsAreEqual(float first, float second) {
+        float epsilon = 0.00001f;
 
-   /* void FixedUpdate()
-    {
-        float speed = 10f;
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        Debug.Log("Bewegung Hori: " + moveHorizontal.ToString());
-        Debug.Log("Bewegung Verti: " + moveVertical.ToString());
-        //rb.AddForce(movement * speed);
-        rb.MovePosition();
-    }*/
+        return System.Math.Abs(first - second) <= epsilon;
+    }
 
     void Update()
     {
@@ -32,12 +19,26 @@ public class PlayerControl : MonoBehaviour {
             // moving to right
             if (Input.GetAxis("Horizontal") > 0)
             {
-                iTween.MoveBy(this.gameObject, new Vector3(1, 0, 0), 0.2f);
+                iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);
+                mesh.transform.eulerAngles = new Vector3(0,90,0);
+                print("Winkel: " + mesh.transform.eulerAngles.y);
+                /*if(!FloatsAreEqual(mesh.transform.eulerAngles.y, 90f)) {
+                    mesh.transform.eulerAngles.Set(0, 90.0f, 0);
+                    print("Winkel: " + mesh.transform.eulerAngles.y);
+                }*/
+                //iTween.MoveBy(this.gameObject, new Vector3(1, 0, 0), 0.2f);
             }
             // moving to left
             else if (Input.GetAxis("Horizontal") < 0)
             {
-                iTween.MoveBy(this.gameObject, new Vector3(-1, 0, 0), 0.2f);
+                iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
+                mesh.transform.eulerAngles = new Vector3(0, 270, 0);
+                print("Winkel: " + mesh.transform.eulerAngles.y);
+                /*if (!FloatsAreEqual(mesh.transform.eulerAngles.y, -90f))
+                {
+                    mesh.transform.eulerAngles.Set(0, -90.0f, 0);
+                    print("Winkel: " + mesh.transform.eulerAngles.y);
+                }*/
             }
         }
 
@@ -46,12 +47,14 @@ public class PlayerControl : MonoBehaviour {
             // moving to up
             if (Input.GetAxis("Vertical") > 0)
             {
-                iTween.MoveBy(this.gameObject, new Vector3(0, 0, 1), 0.2f);
+                iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);
+                mesh.transform.eulerAngles = new Vector3(0, 0, 0);
             }
             // moving to down
             else if (Input.GetAxis("Vertical") < 0)
             {
-                iTween.MoveBy(this.gameObject, new Vector3(0, 0, -1), 0.2f);
+                iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);
+                mesh.transform.eulerAngles = new Vector3(0, 180, 0);
             }
 
         }
