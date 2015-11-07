@@ -10,6 +10,10 @@ public class GameArea {
 	private GameField[,] fields = new GameField[EDGE_SIZE, EDGE_SIZE];
 	private Coord playerPosition = new Coord(0,0);
 
+	public GameField getField(int rowIndex, int colIndex) {
+		return this.fields[rowIndex, colIndex];
+	}
+
 	public void setField(int rowIndex, int colIndex, GameField field) {
 		this.fields[rowIndex, colIndex] = field;
 	}

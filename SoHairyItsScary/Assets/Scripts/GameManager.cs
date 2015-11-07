@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public enum GameState { INTRO, MAIN_MENU, PAUSED, GAME, CREDITS, HELP }
 
@@ -41,6 +40,7 @@ public class GameManager: Object {
 	private void initializeGameArea() {
 		for (int rowIndex=0; rowIndex<GameArea.EDGE_SIZE; rowIndex++) {
 			for (int colIndex=0; colIndex<GameArea.EDGE_SIZE; colIndex++) {
+
 				this.firstArea.setField(rowIndex, colIndex, new GrassGameField());
 			}
 		}
