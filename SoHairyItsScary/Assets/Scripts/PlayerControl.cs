@@ -34,35 +34,45 @@ public class PlayerControl : MonoBehaviour {
 
     void Update()
     {
+		GameLevel level = GM.getCurrentGameLevel ();
+
         if (Input.GetButtonDown("Horizontal"))
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if (Input.GetAxis("Horizontal") > 0) // move right
             {
-                iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);
-                mesh.transform.eulerAngles = new Vector3(0,90,0);
-				GM.getCurrentGameArea().movePlayerX(1);
+				mesh.transform.eulerAngles = new Vector3(0,90,0);
+				if (level.playerCanMoveRight()) {
+					iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);                
+					level.movePlayerX(1);
+				}
             }
-            else if (Input.GetAxis("Horizontal") < 0)
-            {
-                iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
+            else if (Input.GetAxis("Horizontal") < 0) // move left
+            {                
                 mesh.transform.eulerAngles = new Vector3(0, 270, 0);
-				GM.getCurrentGameArea().movePlayerX(-1);
+				if (level.playerCanMoveLeft()) {
+					iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
+					level.movePlayerX(-1);
+				}
             }
         }
 
         if (Input.GetButtonDown("Vertical"))
         {
-            if (Input.GetAxis("Vertical") > 0)
+            if (Input.GetAxis("Vertical") > 0) // move top
             {
-                iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);
-                mesh.transform.eulerAngles = new Vector3(0, 0, 0);
-				GM.getCurrentGameArea().movePlayerY(1);
+				mesh.transform.eulerAngles = new Vector3(0, 0, 0);
+				if (level.playerCanMoveTop()) {
+					iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);                
+					level.movePlayerY(1);
+				}
             }
-            else if (Input.GetAxis("Vertical") < 0)
+            else if (Input.GetAxis("Vertical") < 0) // move bottom
             {
-                iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);
-                mesh.transform.eulerAngles = new Vector3(0, 180, 0);
-				GM.getCurrentGameArea().movePlayerY(-1);
+				mesh.transform.eulerAngles = new Vector3(0, 180, 0);
+				if (level.playerCanMoveBottom()) {
+					iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);                
+					level.movePlayerY(-1);
+				}
             }
 
         }

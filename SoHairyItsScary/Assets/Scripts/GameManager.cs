@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public enum GameState { INTRO, MAIN_MENU, PAUSED, GAME, CREDITS, HELP }
 
@@ -42,34 +42,35 @@ public class GameManager: Object {
 		//
 		// Setup 1st GameLevel row-by-row
 		//
-		this.firstArea.setField(0, 0, new GrassGameField());
-		this.firstArea.setField(0, 1, new GrassGameField());
-		this.firstArea.setField(0, 2, new GrassGameField());
-		this.firstArea.setField(0, 3, new GrassGameField());
-		this.firstArea.setField(0, 4, new GrassGameField());
-		this.firstArea.setField(0, 5, new GrassGameField());
-		this.firstArea.setField(0, 6, new GrassGameField());
-		this.firstArea.setField(0, 7, new GrassGameField());
-		this.firstArea.setField(0, 8, new GrassGameField());
-		this.firstArea.setField(0, 9, new GrassGameField());
-		this.firstArea.setField(0, 10, new GrassGameField());
-		this.firstArea.setField(0, 11, new GrassGameField());
-		this.firstArea.setField(0, 12, new GrassGameField());
-		this.firstArea.setField(0, 13, new GrassGameField());
-		this.firstArea.setField(0, 14, new StoneGameField());
-		this.firstArea.setField(0, 15, new StoneGameField());
-		this.firstArea.setField(0, 16, new GrassGameField());
-		this.firstArea.setField(0, 17, new GrassGameField());
-		this.firstArea.setField(0, 18, new GrassGameField());
-		this.firstArea.setField(0, 19, new GrassGameField());
-		this.firstArea.setField(0, 20, new GrassGameField());
-		this.firstArea.setField(0, 21, new GrassGameField());
-		this.firstArea.setField(0, 22, new GrassGameField());
-		this.firstArea.setField(0, 23, new GrassGameField());
-		this.firstArea.setField(0, 24, new GrassGameField());
-		this.firstArea.setField(0, 25, new GrassGameField());
 
-		this.firstArea.setField(1, 0, new GrassGameField());
+		this.firstArea.setField(0, 0, new GrassGameField(false));
+		this.firstArea.setField(0, 1, new GrassGameField(false));
+		this.firstArea.setField(0, 2, new GrassGameField(false));
+		this.firstArea.setField(0, 3, new GrassGameField(false));
+		this.firstArea.setField(0, 4, new GrassGameField(false));
+		this.firstArea.setField(0, 5, new GrassGameField(false));
+		this.firstArea.setField(0, 6, new GrassGameField(false));
+		this.firstArea.setField(0, 7, new GrassGameField(false));
+		this.firstArea.setField(0, 8, new GrassGameField(false));
+		this.firstArea.setField(0, 9, new GrassGameField(false));
+		this.firstArea.setField(0, 10, new GrassGameField(false));
+		this.firstArea.setField(0, 11, new GrassGameField(false));
+		this.firstArea.setField(0, 12, new GrassGameField(false));
+		this.firstArea.setField(0, 13, new GrassGameField(false));
+		this.firstArea.setField(0, 14, new StoneGameField(false));
+		this.firstArea.setField(0, 15, new StoneGameField(false));
+		this.firstArea.setField(0, 16, new GrassGameField(false));
+		this.firstArea.setField(0, 17, new GrassGameField(false));
+		this.firstArea.setField(0, 18, new GrassGameField(false));
+		this.firstArea.setField(0, 19, new GrassGameField(false));
+		this.firstArea.setField(0, 20, new GrassGameField(false));
+		this.firstArea.setField(0, 21, new GrassGameField(false));
+		this.firstArea.setField(0, 22, new GrassGameField(false));
+		this.firstArea.setField(0, 23, new GrassGameField(false));
+		this.firstArea.setField(0, 24, new GrassGameField(false));
+		this.firstArea.setField(0, 25, new GrassGameField(false));
+
+		this.firstArea.setField(1, 0, new GrassGameField(false));
 		this.firstArea.setField(1, 1, new GrassGameField());
 		this.firstArea.setField(1, 2, new GrassGameField());
 		this.firstArea.setField(1, 3, new GrassGameField());
@@ -94,9 +95,9 @@ public class GameManager: Object {
 		this.firstArea.setField(1, 22, new GrassGameField());
 		this.firstArea.setField(1, 23, new GrassGameField());
 		this.firstArea.setField(1, 24, new GrassGameField());
-		this.firstArea.setField(1, 25, new GrassGameField());
+		this.firstArea.setField(1, 25, new GrassGameField(false));
 
-		this.firstArea.setField(2, 0, new GrassGameField());
+		this.firstArea.setField(2, 0, new GrassGameField(false));
 		this.firstArea.setField(2, 1, new GrassGameField());
 		this.firstArea.setField(2, 2, new GrassGameField());
 		this.firstArea.setField(2, 3, new GrassGameField());
@@ -121,9 +122,9 @@ public class GameManager: Object {
 		this.firstArea.setField(2, 22, new StoneGameField());
 		this.firstArea.setField(2, 23, new StoneGameField());
 		this.firstArea.setField(2, 24, new StoneGameField());
-		this.firstArea.setField(2, 25, new StoneGameField());
+		this.firstArea.setField(2, 25, new StoneGameField(false));
 
-		this.firstArea.setField(3, 0, new GrassGameField());
+		this.firstArea.setField(3, 0, new GrassGameField(false));
 		this.firstArea.setField(3, 1, new GrassGameField());
 		this.firstArea.setField(3, 2, new GrassGameField());
 		this.firstArea.setField(3, 3, new GrassGameField());
@@ -148,9 +149,9 @@ public class GameManager: Object {
 		this.firstArea.setField(3, 22, new StoneGameField());
 		this.firstArea.setField(3, 23, new StoneGameField());
 		this.firstArea.setField(3, 24, new StoneGameField());
-		this.firstArea.setField(3, 25, new GrassGameField());
+		this.firstArea.setField(3, 25, new GrassGameField(false));
 
-		this.firstArea.setField(4, 0, new GrassGameField());
+		this.firstArea.setField(4, 0, new GrassGameField(false));
 		this.firstArea.setField(4, 1, new GrassGameField());
 		this.firstArea.setField(4, 2, new GrassGameField());
 		this.firstArea.setField(4, 3, new GrassGameField());
@@ -175,9 +176,9 @@ public class GameManager: Object {
 		this.firstArea.setField(4, 22, new StoneGameField());
 		this.firstArea.setField(4, 23, new StoneGameField());
 		this.firstArea.setField(4, 24, new StoneGameField());
-		this.firstArea.setField(4, 25, new StoneGameField());
+		this.firstArea.setField(4, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(5, 0, new GrassGameField());
+		this.firstArea.setField(5, 0, new GrassGameField(false));
 		this.firstArea.setField(5, 1, new GrassGameField());
 		this.firstArea.setField(5, 2, new GrassGameField());
 		this.firstArea.setField(5, 3, new GrassGameField());
@@ -202,9 +203,9 @@ public class GameManager: Object {
 		this.firstArea.setField(5, 22, new StoneGameField());
 		this.firstArea.setField(5, 23, new StoneGameField());
 		this.firstArea.setField(5, 24, new StoneGameField());
-		this.firstArea.setField(5, 25, new StoneGameField());
+		this.firstArea.setField(5, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(6, 0, new GrassGameField());
+		this.firstArea.setField(6, 0, new GrassGameField(false));
 		this.firstArea.setField(6, 1, new GrassGameField());
 		this.firstArea.setField(6, 2, new GrassGameField());
 		this.firstArea.setField(6, 3, new GrassGameField());
@@ -229,9 +230,9 @@ public class GameManager: Object {
 		this.firstArea.setField(6, 22, new StoneGameField());
 		this.firstArea.setField(6, 23, new StoneGameField());
 		this.firstArea.setField(6, 24, new StoneGameField());
-		this.firstArea.setField(6, 25, new StoneGameField());
+		this.firstArea.setField(6, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(7, 0, new GrassGameField());
+		this.firstArea.setField(7, 0, new GrassGameField(false));
 		this.firstArea.setField(7, 1, new GrassGameField());
 		this.firstArea.setField(7, 2, new WaterGameField());
 		this.firstArea.setField(7, 3, new WaterGameField());
@@ -256,9 +257,9 @@ public class GameManager: Object {
 		this.firstArea.setField(7, 22, new StoneGameField());
 		this.firstArea.setField(7, 23, new StoneGameField());
 		this.firstArea.setField(7, 24, new StoneGameField());
-		this.firstArea.setField(7, 25, new StoneGameField());
+		this.firstArea.setField(7, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(8, 0, new GrassGameField());
+		this.firstArea.setField(8, 0, new GrassGameField(false));
 		this.firstArea.setField(8, 1, new GrassGameField());
 		this.firstArea.setField(8, 2, new WaterGameField());
 		this.firstArea.setField(8, 3, new WaterGameField());
@@ -283,9 +284,9 @@ public class GameManager: Object {
 		this.firstArea.setField(8, 22, new StoneGameField());
 		this.firstArea.setField(8, 23, new StoneGameField());
 		this.firstArea.setField(8, 24, new StoneGameField());
-		this.firstArea.setField(8, 25, new StoneGameField());
+		this.firstArea.setField(8, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(9, 0, new GrassGameField());
+		this.firstArea.setField(9, 0, new GrassGameField(false));
 		this.firstArea.setField(9, 1, new GrassGameField());
 		this.firstArea.setField(9, 2, new WaterGameField());
 		this.firstArea.setField(9, 3, new WaterGameField());
@@ -310,9 +311,9 @@ public class GameManager: Object {
 		this.firstArea.setField(9, 22, new StoneGameField());
 		this.firstArea.setField(9, 23, new StoneGameField());
 		this.firstArea.setField(9, 24, new StoneGameField());
-		this.firstArea.setField(9, 25, new StoneGameField());
+		this.firstArea.setField(9, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(10, 0, new GrassGameField());
+		this.firstArea.setField(10, 0, new GrassGameField(false));
 		this.firstArea.setField(10, 1, new GrassGameField());
 		this.firstArea.setField(10, 2, new WaterGameField());
 		this.firstArea.setField(10, 3, new WaterGameField());
@@ -337,9 +338,9 @@ public class GameManager: Object {
 		this.firstArea.setField(10, 22, new StoneGameField());
 		this.firstArea.setField(10, 23, new StoneGameField());
 		this.firstArea.setField(10, 24, new StoneGameField());
-		this.firstArea.setField(10, 25, new StoneGameField());
+		this.firstArea.setField(10, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(11, 0, new GrassGameField());
+		this.firstArea.setField(11, 0, new GrassGameField(false));
 		this.firstArea.setField(11, 1, new GrassGameField());
 		this.firstArea.setField(11, 2, new WaterGameField());
 		this.firstArea.setField(11, 3, new WaterGameField());
@@ -364,9 +365,9 @@ public class GameManager: Object {
 		this.firstArea.setField(11, 22, new StoneGameField());
 		this.firstArea.setField(11, 23, new StoneGameField());
 		this.firstArea.setField(11, 24, new StoneGameField());
-		this.firstArea.setField(11, 25, new StoneGameField());
+		this.firstArea.setField(11, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(12, 0, new GrassGameField());
+		this.firstArea.setField(12, 0, new GrassGameField(false));
 		this.firstArea.setField(12, 1, new GrassGameField());
 		this.firstArea.setField(12, 2, new WaterGameField());
 		this.firstArea.setField(12, 3, new WaterGameField());
@@ -391,9 +392,9 @@ public class GameManager: Object {
 		this.firstArea.setField(12, 22, new StoneGameField());
 		this.firstArea.setField(12, 23, new StoneGameField());
 		this.firstArea.setField(12, 24, new StoneGameField());
-		this.firstArea.setField(12, 25, new StoneGameField());
+		this.firstArea.setField(12, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(13, 0, new GrassGameField());
+		this.firstArea.setField(13, 0, new GrassGameField(false));
 		this.firstArea.setField(13, 1, new GrassGameField());
 		this.firstArea.setField(13, 2, new WaterGameField());
 		this.firstArea.setField(13, 3, new WaterGameField());
@@ -418,9 +419,9 @@ public class GameManager: Object {
 		this.firstArea.setField(13, 22, new StoneGameField());
 		this.firstArea.setField(13, 23, new StoneGameField());
 		this.firstArea.setField(13, 24, new StoneGameField());
-		this.firstArea.setField(13, 25, new StoneGameField());
+		this.firstArea.setField(13, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(14, 0, new GrassGameField());
+		this.firstArea.setField(14, 0, new GrassGameField(false));
 		this.firstArea.setField(14, 1, new GrassGameField());
 		this.firstArea.setField(14, 2, new WaterGameField());
 		this.firstArea.setField(14, 3, new WaterGameField());
@@ -445,9 +446,9 @@ public class GameManager: Object {
 		this.firstArea.setField(14, 22, new StoneGameField());
 		this.firstArea.setField(14, 23, new StoneGameField());
 		this.firstArea.setField(14, 24, new StoneGameField());
-		this.firstArea.setField(14, 25, new StoneGameField());
+		this.firstArea.setField(14, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(15, 0, new GrassGameField());
+		this.firstArea.setField(15, 0, new GrassGameField(false));
 		this.firstArea.setField(15, 1, new GrassGameField());
 		this.firstArea.setField(15, 2, new WaterGameField());
 		this.firstArea.setField(15, 3, new WaterGameField());
@@ -472,9 +473,9 @@ public class GameManager: Object {
 		this.firstArea.setField(15, 22, new StoneGameField());
 		this.firstArea.setField(15, 23, new StoneGameField());
 		this.firstArea.setField(15, 24, new StoneGameField());
-		this.firstArea.setField(15, 25, new StoneGameField());
+		this.firstArea.setField(15, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(16, 0, new GrassGameField());
+		this.firstArea.setField(16, 0, new GrassGameField(false));
 		this.firstArea.setField(16, 1, new GrassGameField());
 		this.firstArea.setField(16, 2, new WaterGameField());
 		this.firstArea.setField(16, 3, new WaterGameField());
@@ -499,9 +500,9 @@ public class GameManager: Object {
 		this.firstArea.setField(16, 22, new StoneGameField());
 		this.firstArea.setField(16, 23, new StoneGameField());
 		this.firstArea.setField(16, 24, new StoneGameField());
-		this.firstArea.setField(16, 25, new StoneGameField());
+		this.firstArea.setField(16, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(17, 0, new GrassGameField());
+		this.firstArea.setField(17, 0, new GrassGameField(false));
 		this.firstArea.setField(17, 1, new GrassGameField());
 		this.firstArea.setField(17, 2, new WaterGameField());
 		this.firstArea.setField(17, 3, new WaterGameField());
@@ -526,9 +527,9 @@ public class GameManager: Object {
 		this.firstArea.setField(17, 22, new StoneGameField());
 		this.firstArea.setField(17, 23, new StoneGameField());
 		this.firstArea.setField(17, 24, new StoneGameField());
-		this.firstArea.setField(17, 25, new StoneGameField());
+		this.firstArea.setField(17, 25, new StoneGameField(false));
 
-		this.firstArea.setField(18, 0, new GrassGameField());
+		this.firstArea.setField(18, 0, new GrassGameField(false));
 		this.firstArea.setField(18, 1, new GrassGameField());
 		this.firstArea.setField(18, 2, new WaterGameField());
 		this.firstArea.setField(18, 3, new WaterGameField());
@@ -553,9 +554,9 @@ public class GameManager: Object {
 		this.firstArea.setField(18, 22, new StoneGameField());
 		this.firstArea.setField(18, 23, new StoneGameField());
 		this.firstArea.setField(18, 24, new StoneGameField());
-		this.firstArea.setField(18, 25, new StoneGameField());
+		this.firstArea.setField(18, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(19, 0, new GrassGameField());
+		this.firstArea.setField(19, 0, new GrassGameField(false));
 		this.firstArea.setField(19, 1, new GrassGameField());
 		this.firstArea.setField(19, 2, new WaterGameField());
 		this.firstArea.setField(19, 3, new WaterGameField());
@@ -580,9 +581,9 @@ public class GameManager: Object {
 		this.firstArea.setField(19, 22, new StoneGameField());
 		this.firstArea.setField(19, 23, new StoneGameField());
 		this.firstArea.setField(19, 24, new StoneGameField());
-		this.firstArea.setField(19, 25, new StoneGameField());
+		this.firstArea.setField(19, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(20, 0, new GrassGameField());
+		this.firstArea.setField(20, 0, new GrassGameField(false));
 		this.firstArea.setField(20, 1, new GrassGameField());
 		this.firstArea.setField(20, 2, new WaterGameField());
 		this.firstArea.setField(20, 3, new WaterGameField());
@@ -607,9 +608,9 @@ public class GameManager: Object {
 		this.firstArea.setField(20, 22, new StoneGameField());
 		this.firstArea.setField(20, 23, new StoneGameField());
 		this.firstArea.setField(20, 24, new StoneGameField());
-		this.firstArea.setField(20, 25, new StoneGameField());
+		this.firstArea.setField(20, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(21, 0, new GrassGameField());
+		this.firstArea.setField(21, 0, new GrassGameField(false));
 		this.firstArea.setField(21, 1, new GrassGameField());
 		this.firstArea.setField(21, 2, new WaterGameField());
 		this.firstArea.setField(21, 3, new WaterGameField());
@@ -634,9 +635,9 @@ public class GameManager: Object {
 		this.firstArea.setField(21, 22, new StoneGameField());
 		this.firstArea.setField(21, 23, new StoneGameField());
 		this.firstArea.setField(21, 24, new StoneGameField());
-		this.firstArea.setField(21, 25, new StoneGameField());
+		this.firstArea.setField(21, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(22, 0, new GrassGameField());
+		this.firstArea.setField(22, 0, new GrassGameField(false));
 		this.firstArea.setField(22, 1, new GrassGameField());
 		this.firstArea.setField(22, 2, new WaterGameField());
 		this.firstArea.setField(22, 3, new WaterGameField());
@@ -661,9 +662,9 @@ public class GameManager: Object {
 		this.firstArea.setField(22, 22, new StoneGameField());
 		this.firstArea.setField(22, 23, new StoneGameField());
 		this.firstArea.setField(22, 24, new StoneGameField());
-		this.firstArea.setField(22, 25, new StoneGameField());
+		this.firstArea.setField(22, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(23, 0, new GrassGameField());
+		this.firstArea.setField(23, 0, new GrassGameField(false));
 		this.firstArea.setField(23, 1, new GrassGameField());
 		this.firstArea.setField(23, 2, new WaterGameField());
 		this.firstArea.setField(23, 3, new WaterGameField());
@@ -688,9 +689,9 @@ public class GameManager: Object {
 		this.firstArea.setField(23, 22, new StoneGameField());
 		this.firstArea.setField(23, 23, new StoneGameField());
 		this.firstArea.setField(23, 24, new StoneGameField());
-		this.firstArea.setField(23, 25, new StoneGameField());
+		this.firstArea.setField(23, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(24, 0, new GrassGameField());
+		this.firstArea.setField(24, 0, new GrassGameField(false));
 		this.firstArea.setField(24, 1, new GrassGameField());
 		this.firstArea.setField(24, 2, new WaterGameField());
 		this.firstArea.setField(24, 3, new WaterGameField());
@@ -715,9 +716,9 @@ public class GameManager: Object {
 		this.firstArea.setField(24, 22, new StoneGameField());
 		this.firstArea.setField(24, 23, new StoneGameField());
 		this.firstArea.setField(24, 24, new StoneGameField());
-		this.firstArea.setField(24, 25, new StoneGameField());
+		this.firstArea.setField(24, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(25, 0, new GrassGameField());
+		this.firstArea.setField(25, 0, new GrassGameField(false));
 		this.firstArea.setField(25, 1, new GrassGameField());
 		this.firstArea.setField(25, 2, new WaterGameField());
 		this.firstArea.setField(25, 3, new WaterGameField());
@@ -742,9 +743,9 @@ public class GameManager: Object {
 		this.firstArea.setField(25, 22, new StoneGameField());
 		this.firstArea.setField(25, 23, new StoneGameField());
 		this.firstArea.setField(25, 24, new StoneGameField());
-		this.firstArea.setField(25, 25, new StoneGameField());
+		this.firstArea.setField(25, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(26, 0, new GrassGameField());
+		this.firstArea.setField(26, 0, new GrassGameField(false));
 		this.firstArea.setField(26, 1, new GrassGameField());
 		this.firstArea.setField(26, 2, new WaterGameField());
 		this.firstArea.setField(26, 3, new WaterGameField());
@@ -769,9 +770,9 @@ public class GameManager: Object {
 		this.firstArea.setField(26, 22, new StoneGameField());
 		this.firstArea.setField(26, 23, new StoneGameField());
 		this.firstArea.setField(26, 24, new StoneGameField());
-		this.firstArea.setField(26, 25, new StoneGameField());
+		this.firstArea.setField(26, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(27, 0, new GrassGameField());
+		this.firstArea.setField(27, 0, new GrassGameField(false));
 		this.firstArea.setField(27, 1, new GrassGameField());
 		this.firstArea.setField(27, 2, new WaterGameField());
 		this.firstArea.setField(27, 3, new WaterGameField());
@@ -796,9 +797,9 @@ public class GameManager: Object {
 		this.firstArea.setField(27, 22, new StoneGameField());
 		this.firstArea.setField(27, 23, new StoneGameField());
 		this.firstArea.setField(27, 24, new StoneGameField());
-		this.firstArea.setField(27, 25, new StoneGameField());
+		this.firstArea.setField(27, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(28, 0, new GrassGameField());
+		this.firstArea.setField(28, 0, new GrassGameField(false));
 		this.firstArea.setField(28, 1, new GrassGameField());
 		this.firstArea.setField(28, 2, new WaterGameField());
 		this.firstArea.setField(28, 3, new WaterGameField());
@@ -823,9 +824,9 @@ public class GameManager: Object {
 		this.firstArea.setField(28, 22, new StoneGameField());
 		this.firstArea.setField(28, 23, new StoneGameField());
 		this.firstArea.setField(28, 24, new StoneGameField());
-		this.firstArea.setField(28, 25, new StoneGameField());
+		this.firstArea.setField(28, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(29, 0, new GrassGameField());
+		this.firstArea.setField(29, 0, new GrassGameField(false));
 		this.firstArea.setField(29, 1, new GrassGameField());
 		this.firstArea.setField(29, 2, new WaterGameField());
 		this.firstArea.setField(29, 3, new WaterGameField());
@@ -850,9 +851,9 @@ public class GameManager: Object {
 		this.firstArea.setField(29, 22, new StoneGameField());
 		this.firstArea.setField(29, 23, new StoneGameField());
 		this.firstArea.setField(29, 24, new StoneGameField());
-		this.firstArea.setField(29, 25, new StoneGameField());
+		this.firstArea.setField(29, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(30, 0, new GrassGameField());
+		this.firstArea.setField(30, 0, new GrassGameField(false));
 		this.firstArea.setField(30, 1, new GrassGameField());
 		this.firstArea.setField(30, 2, new WaterGameField());
 		this.firstArea.setField(30, 3, new WaterGameField());
@@ -877,37 +878,37 @@ public class GameManager: Object {
 		this.firstArea.setField(30, 22, new StoneGameField());
 		this.firstArea.setField(30, 23, new StoneGameField());
 		this.firstArea.setField(30, 24, new StoneGameField());
-		this.firstArea.setField(30, 25, new StoneGameField());
+		this.firstArea.setField(30, 25, new StoneGameField(false));
 		
-		this.firstArea.setField(31, 0, new GrassGameField());
-		this.firstArea.setField(31, 1, new GrassGameField());
-		this.firstArea.setField(31, 2, new WaterGameField());
-		this.firstArea.setField(31, 3, new WaterGameField());
-		this.firstArea.setField(31, 4, new WaterGameField());
-		this.firstArea.setField(31, 5, new WaterGameField());
-		this.firstArea.setField(31, 6, new WaterGameField());
-		this.firstArea.setField(31, 7, new WaterGameField());
-		this.firstArea.setField(31, 8, new GrassGameField());
-		this.firstArea.setField(31, 9, new GrassGameField());
-		this.firstArea.setField(31, 10, new StoneGameField());
-		this.firstArea.setField(31, 11, new StoneGameField());
-		this.firstArea.setField(31, 12, new GrassGameField());
-		this.firstArea.setField(31, 13, new GrassGameField());
-		this.firstArea.setField(31, 14, new GrassGameField());
-		this.firstArea.setField(31, 15, new GrassGameField());
-		this.firstArea.setField(31, 16, new GrassGameField());
-		this.firstArea.setField(31, 17, new GrassGameField());
-		this.firstArea.setField(31, 18, new GrassGameField());
-		this.firstArea.setField(31, 19, new GrassGameField());
-		this.firstArea.setField(31, 20, new StoneGameField());
-		this.firstArea.setField(31, 21, new StoneGameField());
-		this.firstArea.setField(31, 22, new StoneGameField());
-		this.firstArea.setField(31, 23, new StoneGameField());
-		this.firstArea.setField(31, 24, new StoneGameField());
-		this.firstArea.setField(31, 25, new StoneGameField());
+		this.firstArea.setField(31, 0, new GrassGameField(false));
+		this.firstArea.setField(31, 1, new GrassGameField(false));
+		this.firstArea.setField(31, 2, new WaterGameField(false));
+		this.firstArea.setField(31, 3, new WaterGameField(false));
+		this.firstArea.setField(31, 4, new WaterGameField(false));
+		this.firstArea.setField(31, 5, new WaterGameField(false));
+		this.firstArea.setField(31, 6, new WaterGameField(false));
+		this.firstArea.setField(31, 7, new WaterGameField(false));
+		this.firstArea.setField(31, 8, new GrassGameField(false));
+		this.firstArea.setField(31, 9, new GrassGameField(false));
+		this.firstArea.setField(31, 10, new StoneGameField(false));
+		this.firstArea.setField(31, 11, new StoneGameField(false));
+		this.firstArea.setField(31, 12, new GrassGameField(false));
+		this.firstArea.setField(31, 13, new GrassGameField(false));
+		this.firstArea.setField(31, 14, new GrassGameField(false));
+		this.firstArea.setField(31, 15, new GrassGameField(false));
+		this.firstArea.setField(31, 16, new GrassGameField(false));
+		this.firstArea.setField(31, 17, new GrassGameField(false));
+		this.firstArea.setField(31, 18, new GrassGameField(false));
+		this.firstArea.setField(31, 19, new GrassGameField(false));
+		this.firstArea.setField(31, 20, new StoneGameField(false));
+		this.firstArea.setField(31, 21, new StoneGameField(false));
+		this.firstArea.setField(31, 22, new StoneGameField(false));
+		this.firstArea.setField(31, 23, new StoneGameField(false));
+		this.firstArea.setField(31, 24, new StoneGameField(false));
+		this.firstArea.setField(31, 25, new StoneGameField(false));
 	}
 
-	public GameLevel getCurrentGameArea() {
+	public GameLevel getCurrentGameLevel() {
 		return this.firstArea; // ATM this is static
 	}
 }

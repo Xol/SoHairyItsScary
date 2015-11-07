@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 
 public class GrassGameField : GameField {
-/*
-	public Transform CubeForFloor;
+	public GrassGameField() : base()
+	{
 
-	public Transform getPrefab() {
-		return CubeForFloor;
 	}
-*/
+
+	public GrassGameField(bool canBeSteppedOn) : base(canBeSteppedOn)
+	{
+		
+	}
 }

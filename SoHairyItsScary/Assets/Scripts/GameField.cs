@@ -5,5 +5,17 @@ using UnityEngine;
 // ------------------------------------------------------------------------------
 public abstract class GameField
 {
-//	Transform getPrefab();
+	private bool canBeSteppedOn;
+	
+	public GameField() {
+		this.canBeSteppedOn = true;
+	}
+
+	public GameField(bool canBeSteppedOn) {
+		this.canBeSteppedOn = canBeSteppedOn;
+	}
+
+	public bool CanBeSteppedOn() {
+		return this.canBeSteppedOn;
+	}
 }

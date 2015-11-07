@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Instantiation : MonoBehaviour {
@@ -12,7 +12,7 @@ public class Instantiation : MonoBehaviour {
     void Start()
     {
 		GM = GameManager.Instance;
-		currentArea = GM.getCurrentGameArea();
+		currentArea = GM.getCurrentGameLevel();
 		for (int rowIndex=0; rowIndex<GameLevel.EDGE_SIZE_X; rowIndex++) {
 			for (int colIndex=0; colIndex<GameLevel.EDGE_SIZE_Y; colIndex++) {
 				GameField field = currentArea.getField(rowIndex, colIndex);

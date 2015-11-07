@@ -8,8 +8,8 @@ public class GameLevel {
 	public static int EDGE_SIZE_X = 32; // die Kantenlaenge des Spielfelds in X-Richtung
 	public static int EDGE_SIZE_Y = 26; // die Kantenlaenge des Spielfelds in Y-Richtung
 
-	private GameField[,] fields = new GameField[EDGE_SIZE_X, EDGE_SIZE_X];
-	private Coord playerPosition = new Coord(0,0);
+	private GameField[,] fields = new GameField[EDGE_SIZE_X, EDGE_SIZE_Y];
+	private Coord playerPosition = new Coord(1,1);
 
 	public GameField getField(int rowIndex, int colIndex) {
 		return this.fields[rowIndex, colIndex];
@@ -57,5 +57,21 @@ public class GameLevel {
 			return EDGE_SIZE_Y;
 		}
 		return newValue;
+	}
+
+	public bool playerCanMoveLeft() {
+		return (this.playerPosition.x - 1) >= 0;
+	}
+	
+	public bool playerCanMoveRight() {
+		return (this.playerPosition.x + 1) <= EDGE_SIZE_X;
+	}
+	
+	public bool playerCanMoveTop() {
+		return (this.playerPosition.y + 1) <= EDGE_SIZE_Y;
+	}
+	
+	public bool playerCanMoveBottom() {
+		return (this.playerPosition.y - 1) <= 0;
 	}
 }
