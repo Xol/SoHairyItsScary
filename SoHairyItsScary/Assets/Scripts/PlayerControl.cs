@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
+	private static float MOVEMENT_ANIMATION_SECONDS = 0.05f;
+
 	public GameObject player;
 	public GameObject mesh;
 
@@ -51,7 +53,7 @@ public class PlayerControl : MonoBehaviour {
             {
 				mesh.transform.eulerAngles = new Vector3(0,90,0);
 				if (level.playerCanMoveRight()) {
-					iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);                
+					iTween.MoveBy(player, new Vector3(1, 0, 0), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerRight();
 				}
             }
@@ -59,7 +61,7 @@ public class PlayerControl : MonoBehaviour {
             {                
                 mesh.transform.eulerAngles = new Vector3(0, 270, 0);
 				if (level.playerCanMoveLeft()) {
-					iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
+					iTween.MoveBy(player, new Vector3(-1, 0, 0), MOVEMENT_ANIMATION_SECONDS);
 					level.movePlayerLeft();
 				}
             }
@@ -71,7 +73,7 @@ public class PlayerControl : MonoBehaviour {
             {
 				mesh.transform.eulerAngles = new Vector3(0, 0, 0);
 				if (level.playerCanMoveTop()) {
-					iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);                
+					iTween.MoveBy(player, new Vector3(0, 0, 1), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerTop();
 				}
             }
@@ -79,7 +81,7 @@ public class PlayerControl : MonoBehaviour {
             {
 				mesh.transform.eulerAngles = new Vector3(0, 180, 0);
 				if (level.playerCanMoveBottom()) {
-					iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);                
+					iTween.MoveBy(player, new Vector3(0, 0, -1), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerBottom();
 				}
             }
