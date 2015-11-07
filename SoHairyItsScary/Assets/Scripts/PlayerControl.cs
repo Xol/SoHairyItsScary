@@ -42,6 +42,7 @@ public class PlayerControl : MonoBehaviour {
 
     void Update()
     {
+//		Debug.Log("Pos: x: " + player.transform.position.x + ", z:" + player.transform.position.z);
 		GameLevel level = GM.getCurrentGameLevel ();
 
         if (Input.GetButtonDown("Horizontal"))

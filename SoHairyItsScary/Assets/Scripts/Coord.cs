@@ -10,6 +10,6 @@ public class Coord {
 
 	public override string ToString()
 	{
-		return "x: " + this.x + ", y: " + this.z;
+		return "x: " + this.x + ", z: " + this.z;
 	}
 }
