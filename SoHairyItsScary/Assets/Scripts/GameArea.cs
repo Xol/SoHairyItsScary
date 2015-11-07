@@ -20,15 +20,25 @@ public class GameArea {
 
 	public void movePlayerX(int offsetX) {
 		int newValueX = this.playerPosition.x + offsetX;
-		Coord newPosistion = new Coord(newValueX, this.playerPosition.y);
+		Coord newPosistion = new Coord(fixBoundary(newValueX), this.playerPosition.y);
 
 		this.playerPosition = newPosistion;
 		Debug.Log("New player position: " + this.playerPosition);
 	}
-	
+
+	private int fixBoundary(int newValue) {
+		if (newValue < 0) {
+			return 0;
+		} 
+		if (newValue > EDGE_SIZE) {
+			return EDGE_SIZE;
+		}
+		return newValue;
+	}
+
 	public void movePlayerY(int offsetY) {
 		int newValueY = this.playerPosition.y + offsetY;
-		Coord newPosistion = new Coord(this.playerPosition.x, newValueY);
+		Coord newPosistion = new Coord(this.playerPosition.x, fixBoundary(newValueY));
 		
 		this.playerPosition = newPosistion;
 		Debug.Log("New player position: " + this.playerPosition);
