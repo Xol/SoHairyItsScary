@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
+	public GameObject player;
+	public GameObject mesh;
+
 	GameManager GM;
 
 	void Awake () {
@@ -12,6 +15,8 @@ public class PlayerControl : MonoBehaviour {
 
 		Debug.Log("Trigger gamestate change...");
 		GM.SetGameState(GameState.MAIN_MENU);
+
+		positionPlayer();
 	}
 
 	public void HandleOnStateChange ()
@@ -22,9 +27,12 @@ public class PlayerControl : MonoBehaviour {
 	public void LoadLevel(){
 		Debug.Log("Handling state change to: " + GM.gameState);
 	}
+	
+	public void positionPlayer() {
+		Coord playerPosition = GM.getCurrentGameLevel().getPlayerPosition();
 
-    public GameObject player;
-    public GameObject mesh;
+		player.transform.position = new Vector3 (playerPosition.x, 1.0f, playerPosition.z);
+	}
 
     public static bool FloatsAreEqual(float first, float second) {
         float epsilon = 0.00001f;
@@ -43,7 +51,7 @@ public class PlayerControl : MonoBehaviour {
 				mesh.transform.eulerAngles = new Vector3(0,90,0);
 				if (level.playerCanMoveRight()) {
 					iTween.MoveBy(player, new Vector3(1, 0, 0), 0.2f);                
-					level.movePlayerX(1);
+					level.movePlayerRight();
 				}
             }
             else if (Input.GetAxis("Horizontal") < 0) // move left
@@ -51,7 +59,7 @@ public class PlayerControl : MonoBehaviour {
                 mesh.transform.eulerAngles = new Vector3(0, 270, 0);
 				if (level.playerCanMoveLeft()) {
 					iTween.MoveBy(player, new Vector3(-1, 0, 0), 0.2f);
-					level.movePlayerX(-1);
+					level.movePlayerLeft();
 				}
             }
         }
@@ -63,7 +71,7 @@ public class PlayerControl : MonoBehaviour {
 				mesh.transform.eulerAngles = new Vector3(0, 0, 0);
 				if (level.playerCanMoveTop()) {
 					iTween.MoveBy(player, new Vector3(0, 0, 1), 0.2f);                
-					level.movePlayerY(1);
+					level.movePlayerTop();
 				}
             }
             else if (Input.GetAxis("Vertical") < 0) // move bottom
@@ -71,7 +79,7 @@ public class PlayerControl : MonoBehaviour {
 				mesh.transform.eulerAngles = new Vector3(0, 180, 0);
 				if (level.playerCanMoveBottom()) {
 					iTween.MoveBy(player, new Vector3(0, 0, -1), 0.2f);                
-					level.movePlayerY(-1);
+					level.movePlayerBottom();
 				}
             }
 
