@@ -14,7 +14,7 @@ public class GameManager: Object {
 
 	public  GameState gameState { get; private set; }
 	
-	public static GameManager Instance{ 
+	public static GameManager Instance {
 		get {
 			if (GameManager.instance == null){
 				GameManager.instance = new GameManager();

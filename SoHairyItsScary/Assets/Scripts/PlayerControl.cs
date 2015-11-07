@@ -2,6 +2,26 @@
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
+	GameManager GM;
+
+	void Awake () {
+		GM = GameManager.Instance;
+		GM.OnStateChange += HandleOnStateChange;
+		
+		Debug.Log("Current game state when Awakes: " + GM.gameState);
+
+		Debug.Log("Trigger gamestate change...");
+		GM.SetGameState(GameState.MAIN_MENU);
+	}
+
+	public void HandleOnStateChange ()
+	{
+		LoadLevel();
+	}
+	
+	public void LoadLevel(){
+		Debug.Log("Handling state change to: " + GM.gameState);
+	}
 
     public GameObject player;
     public GameObject mesh;
