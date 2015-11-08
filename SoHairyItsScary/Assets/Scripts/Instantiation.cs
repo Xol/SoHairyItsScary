@@ -5,8 +5,9 @@ public class Instantiation : MonoBehaviour {
     public Transform CubeForFloor;
 	public Transform CubeForStoneFloor;
 	public Transform CubeForWater;
+    public Transform altar;
 
-	GameManager GM;
+    GameManager GM;
 	GameLevel currentArea;
 
     void Start()
@@ -14,7 +15,7 @@ public class Instantiation : MonoBehaviour {
 		GM = GameManager.Instance;
 		currentArea = GM.getCurrentGameLevel();
 
-		for (int xIndex=0; xIndex<GameLevel.EDGE_SIZE_X; xIndex++) {
+        for (int xIndex=0; xIndex<GameLevel.EDGE_SIZE_X; xIndex++) {
 			for (int zIndex=0; zIndex<GameLevel.EDGE_SIZE_Z; zIndex++) {
 				Vector3 targetPoint = new Vector3(xIndex, -0.5f, zIndex);
 				GameField field = currentArea.getField(xIndex, zIndex);
@@ -37,5 +38,8 @@ public class Instantiation : MonoBehaviour {
 				}
 			}
 		}
+
+        Instantiate(altar, new Vector3(5, 0, 18), Quaternion.identity);
+
     }
 }
