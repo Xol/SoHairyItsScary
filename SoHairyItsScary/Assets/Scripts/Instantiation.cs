@@ -39,7 +39,7 @@ public class Instantiation : MonoBehaviour {
 			}
 		}
 
-        Instantiate(altar, new Vector3(5, 0, 18), Quaternion.identity);
+        //Instantiate(altar, new Vector3(5, 0, 18), Quaternion.identity);
 
     }
 }
