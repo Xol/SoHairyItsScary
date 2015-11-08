@@ -9,7 +9,7 @@ public class GameLevel {
 	public static int EDGE_SIZE_Z = 26;
 
 	private GameField[,] fields = new GameField[EDGE_SIZE_X, EDGE_SIZE_Z];
-	private Coord playerPosition = new Coord(1,1);
+	private Coord playerPosition = new Coord(8,4);
 
 	public GameField getField(int xIndex, int zIndex) {
 		return this.fields[xIndex, zIndex];
