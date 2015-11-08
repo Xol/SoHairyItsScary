@@ -46,6 +46,7 @@ public class PlayerControl : MonoBehaviour {
     {
 //		Debug.Log("Pos: x: " + player.transform.position.x + ", z:" + player.transform.position.z);
 		GameLevel level = GM.getCurrentGameLevel ();
+        bool hasMoved = false;
 
         if (Input.GetButtonDown("Horizontal"))
         {
@@ -55,7 +56,8 @@ public class PlayerControl : MonoBehaviour {
 				if (level.playerCanMoveRight()) {
 					iTween.MoveBy(player, new Vector3(1, 0, 0), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerRight();
-				}
+                    hasMoved = true;
+                }
             }
             else if (Input.GetAxis("Horizontal") < 0) // move left
             {                
@@ -63,7 +65,8 @@ public class PlayerControl : MonoBehaviour {
 				if (level.playerCanMoveLeft()) {
 					iTween.MoveBy(player, new Vector3(-1, 0, 0), MOVEMENT_ANIMATION_SECONDS);
 					level.movePlayerLeft();
-				}
+                    hasMoved = true;
+                }
             }
         }
 
@@ -75,7 +78,8 @@ public class PlayerControl : MonoBehaviour {
 				if (level.playerCanMoveTop()) {
 					iTween.MoveBy(player, new Vector3(0, 0, 1), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerTop();
-				}
+                    hasMoved = true;
+                }
             }
             else if (Input.GetAxis("Vertical") < 0) // move bottom
             {
@@ -83,11 +87,15 @@ public class PlayerControl : MonoBehaviour {
 				if (level.playerCanMoveBottom()) {
 					iTween.MoveBy(player, new Vector3(0, 0, -1), MOVEMENT_ANIMATION_SECONDS);                
 					level.movePlayerBottom();
-				}
+                    hasMoved = true;
+                }
             }
 
         }
 
+        if (hasMoved) {
+            GetComponent<AudioSource>().Play();
+        }
     }
 
 }
