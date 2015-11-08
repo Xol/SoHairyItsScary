@@ -211,7 +211,7 @@ public class GameManager: Object {
 		this.firstArea.setField(0, 5, new GrassGameField(false));
 		this.firstArea.setField(1, 5, new GrassGameField());
 		this.firstArea.setField(2, 5, new GrassGameField());
-		this.firstArea.setField(3, 5, new GrassGameField());
+		this.firstArea.setField(3, 5, new GrassGameField(false));
 		this.firstArea.setField(4, 5, new GrassGameField());
 		this.firstArea.setField(5, 5, new GrassGameField());
 		this.firstArea.setField(6, 5, new GrassGameField());
