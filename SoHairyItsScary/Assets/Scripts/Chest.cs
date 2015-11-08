@@ -5,7 +5,7 @@ public class Chest : MonoBehaviour {
 	public enum ChestState {
 		open,
 		closed,
-		animation
+		animationInProgress
 	}
 
 	public ChestState state;
@@ -38,8 +38,10 @@ public class Chest : MonoBehaviour {
 	}
 
 	private void Open() {
+		state = ChestState.animationInProgress;
 		GetComponent<Animation>().Play("ChestAnim");
 		GetComponent<AudioSource>().Play();
+		state = ChestState.open;
 	}
 	
 	private void Close() {
